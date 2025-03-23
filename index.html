@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book store</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Welcome to ou book store!</h1>
+        <form method="get">
+            <label>Author</label>
+            <input type="text" name="author" id="author">
+            <label>Genre</label>
+            <input type="text" name="genre" id="genre">
+            <label>Langauge</label>
+            <input type="text" name="language" id="language">
+            <label>Price</label>
+            <input type="number" name="price" id="price">
+            <label>Publication year</label>
+            <input type="number" name="year" id="year">
+            <input type="button" id="submission" value="Search"></button>
+        </form>
+        <section>
+            <h1>Available books!</h1>
+            <p id="availablebooks">
+            </p>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
