@@ -8,24 +8,27 @@
 <body>
     <header></header>
     <main>
-        <h1>Welcome to ou book store!</h1>
+        <h1>Welcome to our book store!</h1>
         <form method="get">
-            <label>Author</label>
-            <input type="text" name="author" id="author">
-            <label>Genre</label>
-            <input type="text" name="genre" id="genre">
-            <label>Langauge</label>
-            <input type="text" name="language" id="language">
-            <label>Price</label>
-            <input type="number" name="price" id="price">
-            <label>Publication year</label>
-            <input type="number" name="year" id="year">
+            <label>Search bar</label>
+            <input type="name" name="searchbar" id="searchbar">
             <input type="button" id="submission" value="Search"></button>
+        </form>
+        <form method ="get">
+            <label>Preferences</label>
+            <input type="text" name="preferences" id="preferences">
+            <input type ="button" name="addprefs" id="addprefs" value="Add preferences">
+            <input type="button" name="searchPrefs" id="searchprefs" value="Search preferences">
         </form>
         <section>
             <h1>Available books!</h1>
             <p id="availablebooks">
             </p>
+        </section>
+        <section>
+            <h1>Cart</h1>
+            <p id="cartbutton"></p>
+            <p id="cart"></p>
         </section>
     </main>
     <script src="app.js"></script>
