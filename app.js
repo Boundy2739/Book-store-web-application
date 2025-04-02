@@ -17,7 +17,8 @@ const books = {
  
  
  
-  },
+   },
+
   "Moneyless Society: The Next Economic Evolution":{
  
      Author:"Matthew Holten",
@@ -79,6 +80,27 @@ const books = {
      Price: 10.00,
      PublicationYear: 1964
     },
+    "La divina commedia":{
+        Author:["Dante Alighieri"],
+        Genre:["Poem"],
+        Language:"Italian",
+        Price: 10.00,
+        PublicationYear: 1304
+       },
+    "Le petit prince":{
+        Author:["Antoine de Saint-Exupèry"],
+        Genre:["Children novel, fable"],
+        Language:"French",
+        Price: 10.00,
+        PublicationYear: 1943
+       },
+    "Io non ho paura":{
+        Author:["Niccolò Ammaniti"],
+        Genre:["Novel"],
+        Language:"Italian",
+        Price: 10.00,
+        PublicationYear: 2001
+       },
  }
  
  console.log(Object.values(books).length)
@@ -98,7 +120,7 @@ const books = {
  )
  
  
- 
+ /*This function searchs through the user prefernces*/
  searchPrefs.addEventListener("click",() => {
      console.log("Yes")
      for(let i = 0; i <= favCategory.length ; i++){
@@ -114,6 +136,9 @@ const books = {
              let language = Object.values(bookInfo)[2]
              let price = Object.values(bookInfo)[3]
              let year = Object.values(bookInfo)[4]
+
+
+             /*this searchs through genre preferences*/
              for(let g = 0; g <= genres.length -1 ;g++ ){
                  let t = Object.values(genres)[g]
                  
@@ -139,14 +164,25 @@ const books = {
                  }
  
              }
+             /*this searchs through language preferences*/
              for(let g = 1; g <= 1 ;g++ ){
                  if(favCategory[i] === language){
                      console.log("BOOK FOUND!")
                      console.log(Object.values(books)[e])
-                     const bookList = document.createElement("li")
+                     /*const bookList = document.createElement("li")
                      const textnode = document.createTextNode(Object.entries(bookInfo))
                      bookList.appendChild(textnode)
-                     document.getElementById("availablebooks").appendChild(bookList)
+                     document.getElementById("availablebooks").appendChild(bookList)*/
+                    let titlenode = document.createTextNode("Title: " + Object.keys(books)[e])
+                    let booktitle = document.createElement("li")
+                    booktitle.appendChild(titlenode)
+                    document.getElementById("availablebooks").appendChild(booktitle)
+                    for(let x = 0; x <= 4 ; ++x){
+                        const bookList = document.createElement("li")
+                        const textnode = document.createTextNode(Object.keys(bookInfo)[x] + ": " + Object.values(bookInfo)[x])
+                        bookList.appendChild(textnode)
+                        document.getElementById("availablebooks").appendChild(bookList)
+                    }
                      
                  }
                  else{
@@ -154,6 +190,7 @@ const books = {
                  }
  
              }
+             /*this searchs through author preferences*/
              for(let g = 0; g <= author.length -1 ;g++ ){
                  if(favCategory[i] === Object.values(author)[g]){
                      console.log("BOOK FOUND!")
@@ -164,12 +201,13 @@ const books = {
                      document.getElementById("availablebooks").appendChild(booktitle)
                      for(let x = 0; x <= 4 ; ++x){
                          const bookList = document.createElement("li")
-                         const textnode = document.createTextNode(Object.keys(bookInfo)[x] + Object.values(bookInfo)[x])
+                         const textnode = document.createTextNode(Object.keys(bookInfo)[x] + ": "+ Object.values(bookInfo)[x])
                          bookList.appendChild(textnode)
                          document.getElementById("availablebooks").appendChild(bookList)
                      }
                      
                  }
+                 /*this checks if the user input string is present in the avilable books*/
                  else if(Object.values(author)[g].includes(favCategory[i])){
                      console.log("BOOK FOUND!")
                      console.log(Object.values(books)[e])
@@ -179,7 +217,7 @@ const books = {
                      document.getElementById("availablebooks").appendChild(booktitle)
                      for(let x = 0; x <= 4 ; ++x){
                          const bookList = document.createElement("li")
-                         const textnode = document.createTextNode(Object.keys(bookInfo)[x] + Object.values(bookInfo)[x])
+                         const textnode = document.createTextNode(Object.keys(bookInfo)[x] +": "+ Object.values(bookInfo)[x])
                          bookList.appendChild(textnode)
                          document.getElementById("availablebooks").appendChild(bookList)
                      }
@@ -196,8 +234,10 @@ const books = {
  
      }
  })
- 
+
+ /*Search bar function*/
  function bookFilter(){
+
      let searchResults = document.getElementById("availablebooks").innerHTML
      let filter = document.getElementById("searchbar").value
      let numOfBooks = Object.keys(books).length
@@ -206,10 +246,10 @@ const books = {
     
      
  
- 
+    
      for (let i = 0 ; i < numOfBooks; ++i ){
          console.log(Object.keys(books)[i])
-         
+         /* this if statement runs if the input contains the exact title of the book*/
          if (filter ==  Object.keys(books)[i]){
              let bookinfo = Object.values(books)[i]
              let buttonisOn = true
@@ -226,21 +266,17 @@ const books = {
                  booklist.appendChild(textnode)
                  document.getElementById("availablebooks").appendChild(booklist)
                 
-                 
-           
- 
-                 
- 
-             
+                            
              
              }
+             /*cart*/
              let but = document.createElement("input")
              but.setAttribute("id","cartbutton")
              but.setAttribute("value","Add to cart")
              but.setAttribute("type","button")
              document.getElementById("availablebooks").append(but)
              let cartButton = document.getElementById("cartbutton")
-                     
+             index += 1       
                   
                  cartButton.addEventListener("click",() => {
                       for(let y = 0; y <= 4 && buttonisOn == true; ++y){
@@ -254,9 +290,10 @@ const books = {
                       })
                   
          }
+         /*this checks if there are available books title that contain the string of the user input*/
          else if(Object.keys(books)[i].includes(filter)){
              let bookinfo = Object.values(books)[i]
-             
+             let buttonisOn = true
              console.log("THIS IS THE BOOK")
              console.log("SJSSOdadacacacacacacacacacS")
              let titlenode = document.createTextNode("Title: " + Object.keys(books)[i])
@@ -268,13 +305,45 @@ const books = {
                  let booklist = document.createElement("li")
                  booklist.appendChild(textnode)
                  document.getElementById("availablebooks").appendChild(booklist)
- 
+                 
                  
  
              }
+             let but = document.createElement("input")
+                 but.setAttribute("id","cartbutton" + i)
+                 but.setAttribute("value","Add to cart")
+                 but.setAttribute("type","button")
+                 for(l = 0; l <= 4; ++l){
+                 document.getElementById("availablebooks").append(but)
+                 let cartButton = document.getElementById("cartbutton" + i)
+                 
+                      
+                     cartButton.addEventListener("click",() => {
+
+                        for(let o = 0; o < 1 && buttonisOn == true; o++ ){
+
+                        
+                        
+                        let titlenode = document.createTextNode("Title: " + Object.keys(books)[i])
+                        let booktitle = document.createElement("li")
+                        booktitle.appendChild(titlenode)
+                        document.getElementById("cart").appendChild(booktitle)}
+                       
+                          for(let y = 0; y <= 4 && buttonisOn == true ; ++y){
+                            
+                              let cartTextNode = document.createTextNode(Object.keys(bookinfo)[y] + ": " + Object.values(bookinfo)[y])
+                              let cartItem = document.createElement("li")
+                              cartItem.appendChild(cartTextNode)
+                              document.getElementById("cart").appendChild(cartItem)
+                              if (y == 4){buttonisOn = false}
+                              
+                          }
+       
+                          })}
+            
          }
          else{
-             console.log("THIS IS NOT THE BOOK")
+             console.log("NO BOOKS FOUND")
              
          }        
     
@@ -286,4 +355,4 @@ const books = {
  let subbutton = document.getElementById("submission")
  subbutton.addEventListener("click",bookFilter)
  
- let randomstring = ("Squirrel")
+ let teststring = ("Squirrel")
