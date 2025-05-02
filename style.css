@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+    max-width: 900px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+/* Headings */
+h1, h2 {
+    color: #003366;
+    margin-top: 1.5em;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button{
+    margin-top: 1em;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.7em 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="button"]:hover {
+    background-color: #004a99;
+}
+
+/* Sections */
+section {
+    margin-top: 2em;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+
+#wishlist,
+#cart {
+    padding: 1em;
+    background-color: #eef;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+/* Buttons */
+#showwish,
+#showcart {
+    background-color: #005813;
+    color: white;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+#showwish:hover,
+#showcart:hover {
+    background-color: #810303;
+}
+
+
+.skip-to-cart {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: #005813;
+    color: white;
+    padding: 0.7em 1.2em;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+.skip-to-cart:hover {
+    background-color: #004a0f;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    background-color: #003366;
+    color: white;
+    padding: 0.7em 1.2em;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    background-color: #002244;
+}
+
+
+@media (max-width: 600px) {
+    form input[type="text"],
+    form input[type="number"],
+    form select {
+        width: 100%;
+    }
+}
