@@ -4,7 +4,7 @@ const books = [
       Author: ["J.K Rowling"],
       Genre: ["Fantasy","Adventure"],
       Language: ["English"],
-      Price: 25.0,
+      Price: 6.99,
       PublicationYear: 2000,
       Ratings: 4.5,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -13,7 +13,7 @@ const books = [
       Author: ["J.R.R. Tolkien"],
       Genre: ["Fantasy","Adventure"],
       Language: ["English"],
-      Price: 5.0,
+      Price: 8.99,
       PublicationYear: 3000,
       Ratings: 5,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -22,7 +22,7 @@ const books = [
       Author: ["Matthew Holten"],
       Genre: ["Business economics"],
       Language: ["English"],
-      Price: 15.0,
+      Price: 9.99,
       PublicationYear: 2022,
       Ratings: 3,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -31,7 +31,7 @@ const books = [
       Author: ["Matthew Cambell", "Kit Chellel"],
       Genre: ["Criminology"],
       Language: ["English"],
-      Price: 15.0,
+      Price: 5.99,
       PublicationYear: 2023,
       Ratings: 4.3,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -40,7 +40,7 @@ const books = [
       Author: ["William Golding"],
       Genre: ["Dystopian", "Adventure"],
       Language: ["English"],
-      Price: 20.0,
+      Price: 10.99,
       PublicationYear: 2000,
       Ratings: 4.2,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -67,7 +67,7 @@ const books = [
       Author: ["Harper Lee"],
       Genre: ["Gothic Novel"],
       Language: ["English"],
-      Price: 20.0,
+      Price: 8.99,
       PublicationYear: 1960,
       Ratings: 4.5,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -95,7 +95,7 @@ const books = [
       Author: ["Dante Alighieri"],
       Genre: ["Poem"],
       Language: ["Italian"],
-      Price: 9.0,
+      Price: 9.99,
       PublicationYear: 1304,
       Ratings: 5,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -104,7 +104,7 @@ const books = [
       Author: ["Antoine de Saint-Exupèry"],
       Genre: ["Children", "Fable","Novel"],
       Language: ["French","English"],
-      Price: 10.0,
+      Price: 10.99,
       PublicationYear: 1943,
       Ratings: 3.5,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -122,7 +122,7 @@ const books = [
       Author: ["Kohei Horikoshi"],
       Genre: ["Manga"],
       Language: ["English","Japanese"],
-      Price: 12.0,
+      Price: 12.99,
       PublicationYear: 2014,
       Ratings: 4,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -140,7 +140,7 @@ const books = [
     Author: ["Agatha Christie"],
     Genre: ["Mystery","Criminology","Thriller"],
     Language: ["English"],
-    Price: 15.0,
+    Price: 11.99,
     PublicationYear: 1926,
     Ratings: 4,
     Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -158,7 +158,7 @@ const books = [
       Author: ["William Golding"],
       Genre: ["Novel"],
       Language: ["English"],
-      Price: 4.0,
+      Price: 4.99,
       PublicationYear: 1956,
       Ratings: 4.2,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -185,7 +185,7 @@ const books = [
       Author: ["Franz Kafka"],
       Genre: ["Fiction","Philosphy","Fanatsy"],
       Language: ["English","German"],
-      Price: 10.0,
+      Price: 10.99,
       PublicationYear: 1910,
       Ratings: 3.9,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -194,7 +194,7 @@ const books = [
       Author: ["Bolesław Prus"],
       Genre: ["History","Fiction"],
       Language: ["English","Polish"],
-      Price: 4.0,
+      Price: 4.99,
       PublicationYear: 1890,
       Ratings: 3.8,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -203,7 +203,7 @@ const books = [
       Author: ["Homer"],
       Genre: ["Mythology"],
       Language: ["English","Greek"],
-      Price: 4.0,
+      Price: 4.99,
       PublicationYear:  2006,
       Ratings: 3.8,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
@@ -251,6 +251,42 @@ const books = [
       Price: 4.0,
       PublicationYear: 2017,
       Ratings: 4.2,
+      Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {Title: "Jojo's bizzarre adventures: Golden Wind",
+      Author: ["Hirohiko Araki"],
+      Genre: ["Manga","Adventure"],
+      Language: ["English","Japanese"],
+      Price: 7.0,
+      PublicationYear: 1999,
+      Ratings: 4.1,
+      Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {Title: "Full Metal Alchemist",
+      Author: ["Hiromu Arakawa, Makoto Inoue"],
+      Genre: ["Manga","Adventure"],
+      Language: ["English","Japanese"],
+      Price: 5.99,
+      PublicationYear: 2001,
+      Ratings: 3.8,
+      Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {Title: "The ant and the grasshopper",
+      Author: ["Aesop"],
+      Genre: ["Children","Fable"],
+      Language: ["English"],
+      Price: 4.99,
+      PublicationYear: 1867,
+      Ratings: 3.9,
+      Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {Title: "The Lion and the Mouse",
+      Author: ["Jerry Pinkney"],
+      Genre: ["Children","Fable"],
+      Language: ["English"],
+      Price: 5.99,
+      PublicationYear: 2009,
+      Ratings: 3.8,
       Description: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
     },
 ];
